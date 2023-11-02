@@ -69,16 +69,29 @@
 .inputsConteiner input {
     all: unset;
     width: 100%;
-    text-align: center;
-    background-color: rgb(243, 243, 243);
+    
+    background-color: #f3f3f3;
     margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .darkInputsConteiner{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
 }
+.inputsConteiner form  {
+    text-align: center;
+    margin-left: 10px;
+  }
+  
+  .darkInputsConteiner form  {
+    text-align: center;
+    margin-left: 10px
+  }
 
 .darkInputsConteiner input {
     all: unset;
@@ -106,6 +119,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+#titulo{
+    text-align: center;
+}
+#subTitulo{
+    text-align: center;
 }
 
 .unSelected {

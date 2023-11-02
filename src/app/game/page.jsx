@@ -48,15 +48,15 @@ const Game = () => {
 
     return (
         <div className={!dark? Style.conteiner : Style.darkConteiner}>
-            <h1>Selecciona las rondas</h1>
+            <h1 id={Style.titulo}>Selecciona las rondas</h1>
             <div className={Style.botones}>
                 <button className={selectedRondas === 3 ? Style.selected : Style.unSelected} onClick={() => rondasHandler(3)}>3</button>
                 <button className={selectedRondas === 5 ? Style.selected : Style.unSelected} onClick={() => rondasHandler(5)}>5</button>
                 <button className={selectedRondas === 7 ? Style.selected : Style.unSelected} onClick={() => rondasHandler(7)}>7</button>
             </div>
 
+                <h2 id={Style.subTitulo}>Ingrese los nombres de los jugadores</h2>
             <form>
-                <h2>Ingrese los nombres de los jugadores</h2>
 
                 <div className={!dark ? Style.inputsConteiner : Style.darkInputsConteiner}>
                     <img width={50} src="./x.png" alt="x" />
