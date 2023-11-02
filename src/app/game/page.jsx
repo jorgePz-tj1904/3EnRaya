@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState , useEffect } from 'react'
 import { useRouter } from 'next/navigation';
 import Style from './page.module.css';
 import { message } from 'antd';
 
-const game = () => {
+const Game = () => {
     const [rondas, setRondas] = useState(0);
     const [jugadorx, setJugadorx] = useState('');
     const [jugadoro, setJugadoro] = useState('');
@@ -76,4 +76,4 @@ const game = () => {
     )
 }
 
-export default game
+export default Game
