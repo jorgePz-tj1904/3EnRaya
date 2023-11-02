@@ -30,8 +30,6 @@ function App({ params }) {
     const tema = localStorage.getItem('dark');
     if (tema === "true") {
         setDark(true);
-        console.log(tema);
-        console.log(dark);
     }else{
         setDark(false);
     }
@@ -46,7 +44,7 @@ function App({ params }) {
       Jugadoro: Jugadoro
     })
 
-  });
+  },[]);
 
 
 
@@ -58,13 +56,31 @@ function App({ params }) {
   };
 
 
+  const checkWin = (contador) => {
+    switch (rondas) {
+      case '3':
+        if (contador.x === 2 || contador.o === 2) {
+          setWin(true);
+          console.log(contador.x, contador.o);
+        }
+        break;
+      case '5':
+        if (contador.x === 3 || contador.o === 3) {
+          setWin(true);
+        }
+        break;
+      case '7':
+        if (contador.x === 4 || contador.o === 4) {
+          setWin(true);
+        }
+        break;
+    }
+  };
 
 
   const clickHandler = (index) => {
 
     const nuevaGrilla = [...grilla];
-
-    console.log(rondas);
 
     if (nuevaGrilla[index] === null) {
       nuevaGrilla[index] = turno;
@@ -73,42 +89,21 @@ function App({ params }) {
 
       if (verificarGanador(nuevaGrilla, turno)) {
         if (turno === 'x') {
-          setContador({ ...contador, x: contador.x + 1 });
-
+          setContador(prevContador => {
+            const updatedContador = { ...prevContador, x: prevContador.x + 1 };
+            checkWin(updatedContador);
+            return updatedContador;
+          });
         }
         if (turno === 'o') {
-          setContador({ ...contador, o: contador.o + 1 });
-        }
-
-        // los puntos en el switch estan restados 1, por asincronia. Ejemplo: si en el juego el jugador tiene 2 puntos en el switch tiene 1 xd.
-        switch (rondas) {
-          case '3':
-            if (contador.x === 1 && contador.o < 2 || contador.o === 1 && contador.x < 2) {
-              console.log(contador.x, contador.o);
-              return setWin(true);
-            }
-            break;
-          case '5':
-            if (contador.x === 2 && contador.o === 0  || contador.o === 2 && contador.x === 0 ) {
-              return setWin(true);
-            }
-            if(contador.x === 2 && contador.o < 1 || contador.o === 2 && contador.x < 1){
-              return setWin(true);
-            }
-            if(contador.x === 2 || contador.o === 2 ){
-              return setWin(true);
-            }
-            break;
-    
-          case '7':
-            if (contador.x === 3 || contador.o === 3) {
-              return setWin(true);
-            }
-            break;
+          setContador(prevContador => {
+            const updatedContador = { ...prevContador, o: prevContador.o + 1 };
+            checkWin(updatedContador);
+            return updatedContador;
+          });
         }
 
         setPunto(true);
-        console.log(contador.x, contador.o);
 
       } else {
         setTurno(turno === 'x' ? 'o' : 'x');
@@ -162,7 +157,7 @@ function App({ params }) {
             return (
               <div key={index} className={dark ? Style.square : Style.claroSquare} onClick={() => clickHandler(index)}>
 
-                <img width={80} src={item === 'x' ? 'https://i.ibb.co/Tv2gWMZ/x.png' : item === 'o' ? 'https://i.ibb.co/ccTh7mK/o.png' : null} alt='turno' />
+                <img width={80} src={item === 'x' ? 'https://i.ibb.co/Tv2gWMZ/x.png' : item === 'o' ? 'https://i.ibb.co/ccTh7mK/o.png' : null} alt='' />
 
               </div>
             )
