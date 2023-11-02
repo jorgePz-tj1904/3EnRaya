@@ -59,10 +59,10 @@ const game = () => {
                 <h2>Ingrese los nombres de los jugadores</h2>
 
                 <div className={!dark ? Style.inputsConteiner : Style.darkInputsConteiner}>
-                    <img width={50} src="./x.png" alt="" />
+                    <img width={50} src="./x.png" alt="x" />
                     <input id={Style.equis} type="text" value={jugadorx} onChange={(e) => setJugadorx(e.target.value)} />
 
-                    <img width={50} src="./o.png" />
+                    <img width={50} src="./o.png" alt='o'/>
                     <input id={Style.circulo} type="text" value={jugadoro} onChange={(e) => setJugadoro(e.target.value)} />
                 </div>
             </form>

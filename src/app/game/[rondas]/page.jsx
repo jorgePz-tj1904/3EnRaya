@@ -162,7 +162,7 @@ function App({ params }) {
             return (
               <div key={index} className={dark ? Style.square : Style.claroSquare} onClick={() => clickHandler(index)}>
 
-                <img width={80} src={item === 'x' ? 'https://i.ibb.co/Tv2gWMZ/x.png' : item === 'o' ? 'https://i.ibb.co/ccTh7mK/o.png' : null} />
+                <img width={80} src={item === 'x' ? 'https://i.ibb.co/Tv2gWMZ/x.png' : item === 'o' ? 'https://i.ibb.co/ccTh7mK/o.png' : null} alt='turno' />
 
               </div>
             )
