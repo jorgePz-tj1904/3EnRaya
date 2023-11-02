@@ -1,0 +1,134 @@
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteiner h1 {
+    border-bottom: 3px solid red;
+}
+.darkConteiner{
+    color: white;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.buttonBox button {
+    background: red;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    margin-top: 100px;
+}
+
+.buttonBox button:hover {
+    background: #fff;
+    color: blue;
+}
+
+.buttonBox button:before,
+.buttonBox button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: blue;
+    transition: 400ms ease all;
+}
+
+.buttonBox button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.buttonBox button:hover:before,
+.buttonBox button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+.inputsConteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputsConteiner input {
+    all: unset;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    margin-top: 20px;
+}
+
+.darkInputsConteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.darkInputsConteiner input {
+    all: unset;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(243, 243, 243);
+    margin-top: 20px;
+    background-color: rgb(43, 43, 43);
+}
+
+#equis {
+    font-size: 25px;
+    border-bottom: 3px solid red;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+#circulo {
+    font-size: 25px;
+    border-bottom: 3px solid blue;
+    border-radius: 3px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.unSelected {
+    padding: 10px;
+    width: 50px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    transition: .3s;
+    border-radius: 4px;
+}
+
+
+.selected {
+    padding: 10px;
+    width: 50px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    transform: scale(1.1) rotate(4deg);
+    transition: .3s;
+}

@@ -1,0 +1,54 @@
+.conteinerMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.darkConteiner{
+    color: white;
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+}
+
+.buttonBox button {
+    background: red;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    margin-top: 100px;
+}
+
+.buttonBox button:hover {
+    background: #fff;
+    color: blue;
+}
+
+.buttonBox button:before,
+.buttonBox button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: blue;
+    transition: 400ms ease all;
+}
+
+.buttonBox button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.buttonBox button:hover:before,
+.buttonBox button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}

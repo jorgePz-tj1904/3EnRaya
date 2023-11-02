@@ -1,0 +1,109 @@
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+.claroConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: black;
+  margin: -8px;
+}
+
+.conteiner h2 {
+  margin-bottom: 50px;
+}
+
+.claroConteiner h2 {
+  margin-bottom: 50px;
+}
+
+.conteinerGame {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.switchConteiner {
+  width: 100%;
+}
+
+.switch {
+  float: right;
+  margin-right: 20%;
+}
+
+.claroSquare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  width: 100px;
+  height: 100px;
+  font-size: xx-large;
+}
+
+.claroSquare:hover {
+  background-color: rgb(62, 156, 255);
+  cursor: pointer;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+  font-size: xx-large;
+}
+
+.square:hover {
+  background-color: slategrey;
+  cursor: pointer;
+}
+
+.contador {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contador h3 {
+  padding: 20px;
+}
+
+.turno {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.turno h2 {
+  margin-top: 45px;
+}
+
+#equis {
+  border-bottom: 5px solid red;
+  width: 100%;
+}
+
+#circulo {
+  border-bottom: 5px solid blue;
+  width: 100%;
+}
+
+@media (max-width: 330px) {
+  .square {
+    width: 90px;
+    height: 90px;
+  }
+}
