@@ -19,7 +19,7 @@ function App() {
     }else{
         setDark(false);
     }
-},[]);
+});
 
   const temeHandler = () => {
     if (!dark) {

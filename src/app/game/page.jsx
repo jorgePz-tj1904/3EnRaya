@@ -23,7 +23,7 @@ const Game = () => {
         }else{
             setDark(false);
         }
-    },[]);
+    });
 
     const rondasHandler = (value) => {
         setRondas(value);

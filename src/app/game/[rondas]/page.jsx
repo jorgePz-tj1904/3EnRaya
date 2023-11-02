@@ -46,7 +46,7 @@ function App({ params }) {
       Jugadoro: Jugadoro
     })
 
-  }, []);
+  });
 
 
 
@@ -172,7 +172,7 @@ function App({ params }) {
 
       <Modal
         open={win}
-        footer={[<Button onClick={() => { router.push('/game') }}>Volver</Button>]}
+        footer={[<Button key={1} onClick={() => { router.push('/game') }}>Volver</Button>]}
       >
         {turno === 'x' ? (
           <h2>{users && users.jugadorx ? users.jugadorx : 'Jugador X'} Ha Ganado!</h2>
@@ -183,7 +183,7 @@ function App({ params }) {
 
       <Modal
         open={punto}
-        footer={[<Button onClick={reiniciarJuego}>Siguiente ronda!</Button>]}
+        footer={[<Button key={2} onClick={reiniciarJuego}>Siguiente ronda!</Button>]}
       >
         {turno === 'x' ? (
           <h2>Punto de {users && users.jugadorx ? users.jugadorx : 'Jugador X'}!</h2>
@@ -195,7 +195,7 @@ function App({ params }) {
 
       <Modal
         open={empate}
-        footer={[<Button onClick={() => { setEmpate(false); setGrilla([null, null, null, null, null, null, null, null, null,]) }}>Repetir</Button>]}
+        footer={[<Button key={3} onClick={() => { setEmpate(false); setGrilla([null, null, null, null, null, null, null, null, null,]) }}>Repetir</Button>]}
       >
         <h4>Empate!</h4>
       </Modal>
