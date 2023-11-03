@@ -12,16 +12,14 @@ const Page = () => {
     
     const [dark, setDark] = useState(false);
     
-    useEffect(()=>{
-      const tema = localStorage.getItem('dark');
-      if (tema === "true") {
-          setDark(true);
-          console.log(tema);
-          console.log(dark);
-      }else{
-          setDark(false);
-      }
-    });
+    useEffect(() => {
+        const tema = localStorage.getItem('dark');
+        if (tema === "true") {
+            setDark(true);
+        } else {
+            setDark(false);
+        }
+      }, [dark]); 
 
     const nav = () => {
         router.push('/');
