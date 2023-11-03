@@ -48,8 +48,8 @@ function App() {
         <div id={Style.first} class={Style.buttonBox}>
           <button className='' onClick={comfirmHandler}>Jugar!</button>
         </div>
-        <div id={Style.first} class={Style.buttonBox}>
-          <button className='' onClick={()=>router.push('/about')}>Información</button>
+        <div  id={Style.first} class={Style.buttonBox}>
+          <button style={{fontSize:'20px'}} className='' onClick={()=>router.push('/about')}>Información</button>
         </div>
       </div>
     </div>
