@@ -42,8 +42,8 @@ const Page = () => {
                     }}
                     actions={[
                         <LeftOutlined onClick={nav} key='volver' size={80}/>,
-                        <a target='blank' href='https://www.linkedin.com/in/jorge-perez-tichij-38a15523b/'><LinkedinOutlined key='linkedin' size={80}/></a>,
-                        <a target='blank' href='https://github.com/jorgePz-tj1904/3EnRaya'><GithubOutlined  key='github' size={80}/></a>,
+                        <a key='linkedinn' target='blank' href='https://www.linkedin.com/in/jorge-perez-tichij-38a15523b/'><LinkedinOutlined key='linkedin' size={80}/></a>,
+                        <a key='githubb' target='blank' href='https://github.com/jorgePz-tj1904/3EnRaya'><GithubOutlined  key='github' size={80}/></a>,
                     ]}
                 >
                     <Skeleton loading={false} avatar active>
