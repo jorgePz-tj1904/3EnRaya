@@ -18,8 +18,6 @@ const Game = () => {
         const tema = localStorage.getItem('dark');
         if (tema === "true") {
             setDark(true);
-            console.log(tema);
-            console.log(dark);
         }else{
             setDark(false);
         }

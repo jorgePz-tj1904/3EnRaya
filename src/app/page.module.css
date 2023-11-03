@@ -4,6 +4,11 @@
     align-items: center;
     text-align: center;
 }
+#temeImg{
+    margin: 10px;
+    width: 50px;
+    cursor: pointer;
+}
 .darkConteiner{
     color: white;
     background-color: rgb(20, 20, 20);
