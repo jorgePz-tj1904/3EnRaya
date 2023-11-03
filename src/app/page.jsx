@@ -43,8 +43,8 @@ function App() {
 
       <div className={Style.conteinerMenu}>
         <img width={200} src="./icon.png" alt="logo" />
-        <h1>3 en raya!</h1>
-        <p>Revive la nostalgia del juego clásico que todos alguna vez disfrutamos en las aulas, ahora en una experiencia digital.</p>
+
+        <p style={{width:'400px'}}>Revive la nostalgia del juego clásico que todos alguna vez disfrutamos en las aulas, ahora en una experiencia digital.</p>
         <div id={Style.first} class={Style.buttonBox}>
           <button className='' onClick={comfirmHandler}>Jugar!</button>
         </div>
